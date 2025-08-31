@@ -1,3 +1,5 @@
+# Funções
+
 def par_ou_impar(numero): 
     if numero % 2 == 0:
         print("O número é par")
@@ -18,6 +20,7 @@ def countdown(numero):
     for i in range(numero, 0, -1):
         print(i)
 
+# Programa principal
 
 num = int(input("Digite um número:"))
 print("Escolha uma opção:")           
