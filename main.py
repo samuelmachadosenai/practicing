@@ -13,12 +13,18 @@ def maior_ou_menor(numero1, numero2):
 def tabuada(numero):
     for i in range(1, 11):
         print(f"{numero} x {i} = {numero * i}")
-        
+    
+def countdown(numero):
+    for i in range(numero, 0, -1):
+        print(i)
+
+
 num = int(input("Digite um número:"))
-print("Escolha uma opção:\n")           
-print("a) Verificar se um número é par ou ímpar\n")
-print("b) Comparar dois números\n")
-print("c) Mostrar a tabuada de um número\n")
+print("Escolha uma opção:")           
+print("a) Verificar se um número é par ou ímpar")
+print("b) Comparar dois números")
+print("c) Mostrar a tabuada de um número")
+print("d) Contagem regressiva")
 opcao = input()
 
 
@@ -29,3 +35,5 @@ elif opcao == "b":
     maior_ou_menor(num, num2)
 elif opcao == "c":
     tabuada(num)
+elif opcao == "d":
+    countdown(num)
