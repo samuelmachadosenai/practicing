@@ -20,6 +20,11 @@ def countdown(numero):
     for i in range(numero, 0, -1):
         print(i)
 
+
+
+
+
+
 # Programa principal
 
 num = int(input("Digite um número:"))
