@@ -1,5 +1,3 @@
-import time
-
 #1
 
 def ex001():
@@ -110,13 +108,47 @@ def ex011():
 
         print("Conversão para centímetros: {:.0f}\nConversão para milímetros: {:.0f}\nConversão para quilômetros: {:.2f}".format(cm, mm, km))
 
+def ex012():
+    while True:
+        num = int(input("Digite um número para ver sua tabuada.\n"))
+
+        print("-" * 12)
+        print("{} X {:2} = {}".format(num, 1, num*1))
+        print("{} X {:2} = {}".format(num, 2, num*2))
+        print("{} X {:2} = {}".format(num, 3, num*3))
+        print("{} X {:2} = {}".format(num, 4, num*4))
+        print("{} X {:2} = {}".format(num, 5, num*5))
+        print("{} X {:2} = {}".format(num, 6, num*6))
+        print("{} X {:2} = {}".format(num, 7, num*7))
+        print("{} X {:2} = {}".format(num, 8, num*8))
+        print("{} X {:2} = {}".format(num, 9, num*9))
+        print("{} X {:2} = {}".format(num, 10, num*10))
+        print("-" * 12)
+
+        opcao = int(input("\nTentar novamente?\n1 - Sim\n0 - Voltar ao Menu\n"))
+
+        match opcao:
+                        case 1:
+                            continue
+        break
+
+def ex013():
+    real = float(input("Quanto dinheiro você tem na carteira?\nR$"))
+    dolar = real / 5.4
+    euro = real / 6.3
+    print("Com R${:.2f} você pode comprar US${:.2f}\n".format(real, dolar))
+    print("Com R${:.2f} você pode comprar €{:.2f}\n".format(real, euro))
+
+def ex014():
+    p = float(input("Digite o preço do produto:\nR$"))
+    d = int(input("Digite o desconto (%):\n"))
+    print("O preço com {}% de desconto é R${:.2f}".format(d, p - (p*d/100)))
 
 
-
-
-
-
-
+def ex015():
+    s = float(input("Digite o salário do colaborador.\nR$"))
+    r = int(input("Digite o reajuste (%):\n"))
+    print("O salário com {}% de reajuste é R${:.2f}".format(r, s + (s*r/100)))
 
 
 
@@ -138,12 +170,7 @@ def ex011():
 
 while True:
 
-    print("Carregando", end="")
-    for i in range(3):
-        time.sleep(0.5)
-        print(".", end="", flush=True)
-
-    opcao = int(input("\nMENU PRINCIPAL\nInsira o exercício a ser executado (1-8):\n"))
+    opcao = int(input("\nMENU PRINCIPAL\nInsira o exercício a ser executado (1-100):\n"))
 
     match opcao:
         case 1:
@@ -167,6 +194,14 @@ while True:
         case 10:
             ex010()
         case 11:
-              ex011()
+            ex011()
+        case 12:
+              ex012()
+        case 13:
+            ex013()
+        case 14:
+            ex014()
+        case 15:
+            ex015()
         case _:
             print("\nValor inválido. Tente novamente.")
