@@ -102,10 +102,13 @@ def ex010():
 
 def ex011():
         medida = float(input("Uma distância em metros:\n"))
+        km = medida / 1000
         cm = medida * 100
         mm = medida * 1000
 
-        print("Conversão para centímetros: {:.0f}\nConversão para milímetros: {:.0f}\n".format(cm, mm))
+
+
+        print("Conversão para centímetros: {:.0f}\nConversão para milímetros: {:.0f}\nConversão para quilômetros: {:.2f}".format(cm, mm, km))
 
 
 
