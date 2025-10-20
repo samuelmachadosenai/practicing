@@ -163,7 +163,33 @@ def ex016():
             case 2:
                 f = float(input("\nDigite a temperatura (°F):"))
                 print("\n{:.1f} graus Fahrenheit equivalem a {:.1f} graus Celsius.\n".format(f, (f - 32) / 1.8))
- 
+
+def ex017():
+    d = int(input("O carro foi alugado por quantos dias?\n"))
+    km = int(input("Quantos km rodados?\n"))
+
+    t = (d * 60) + (km * 0.15)
+
+    print(f"Total a pagar: R${t}")
+
+def ex018():
+    import math
+    num = int(input("Digite um número:\n"))
+    raiz = math.sqrt(num)
+    print("A raiz quadrada de {} é {:.2f}.".format(num, raiz))
+
+def ex019():
+    import math
+
+    num = float(input("Digite um valor:\n"))
+    print("O valor digitado foi {} e sua porção inteira é {:.0f}.".format(num, math.floor(num)))
+
+
+
+
+
+
+
 
 
 
@@ -221,5 +247,13 @@ while True:
             ex015()
         case 16:
             ex016()
+        case 17:
+            ex017()
+        case 18:
+            ex018()
+        case 19:
+            ex019()
+        case 20:
+            ex020()
         case _:
             print("\nValor inválido. Tente novamente.")
