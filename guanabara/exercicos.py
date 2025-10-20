@@ -151,6 +151,22 @@ def ex015():
     print("O salário com {}% de reajuste é R${:.2f}".format(r, s + (s*r/100)))
 
 
+def ex016():
+    while True:
+        opcao = int(input("Conversor\n1. Celsius para Fahrenheit\n2. Fahrenheit para Celsius\n"))
+
+        match opcao:
+            case 1:
+                c = float(input("Digite a temperatura (°C):\n"))
+                print("\n{:.1f} graus Celsius equivalem a {:.1f} graus Fahrenheit.\n".format(c, c * 1.8 + 32))
+                break
+            case 2:
+                f = float(input("\nDigite a temperatura (°F):"))
+                print("\n{:.1f} graus Fahrenheit equivalem a {:.1f} graus Celsius.\n".format(f, (f - 32) / 1.8))
+ 
+
+
+
 
 
 
@@ -203,5 +219,7 @@ while True:
             ex014()
         case 15:
             ex015()
+        case 16:
+            ex016()
         case _:
             print("\nValor inválido. Tente novamente.")
