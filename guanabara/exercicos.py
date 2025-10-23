@@ -194,16 +194,41 @@ def ex020():
 
     print("A hipotenusa é igual a {:.2f}".format(math.hypot(co, ca)))
 
+def ex021():
+    import math
 
+    ang = float(input("Digite o ângulo que você deseja:\n"))
+    ang = math.radians(ang)
+    print("Seno: {:.2f}\n".format(math.sin(ang)))
+    print("Cosseno: {:.2f}\n".format(math.cos(ang)))
+    print("Tangente: {:.2f}\n".format(math.tan(ang)))
 
+def ex022():
+    import random
 
+    n1 = input("Primeiro aluno:\n")
+    n2 = input("Segundo aluno:\n")
+    n3 = input("Terceiro aluno:\n")
+    n4 = input("Quarto aluno:\n")
 
+    lista = [n1, n2, n3, n4]
 
+    escolhido = random.choice(lista)
 
+    print("\nO escolhido foi", escolhido)
 
+def ex023():
+    import random
 
+    n1 = input("Primeiro aluno:\n")
+    n2 = input("Segundo aluno:\n")
+    n3 = input("Terceiro aluno:\n")
+    n4 = input("Quarto aluno:\n")
 
+    lista = [n1, n2, n3, n4]
 
+    random.shuffle(lista)
+    print(lista)
 
 
 
@@ -260,5 +285,11 @@ while True:
             ex019()
         case 20:
             ex020()
+        case 21:
+            ex021()
+        case 22:
+            ex022()
+        case 23:
+            ex023()
         case _:
             print("\nValor inválido. Tente novamente.")
