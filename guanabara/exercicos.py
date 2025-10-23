@@ -230,6 +230,10 @@ def ex023():
     random.shuffle(lista)
     print(lista)
 
+def ex024():
+    imp
+
+
 
 
 
