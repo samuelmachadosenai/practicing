@@ -186,8 +186,13 @@ def ex019():
 
 
 
+def ex020():
+    import math
 
+    co = float(input("Comprimento do cateto oposto:\n"))
+    ca = float(input("Comprimento do cateto adjacente:\n"))
 
+    print("A hipotenusa é igual a {:.2f}".format(math.hypot(co, ca)))
 
 
 
