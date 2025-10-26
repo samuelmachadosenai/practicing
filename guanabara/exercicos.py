@@ -231,7 +231,95 @@ def ex023():
     print(lista)
 
 def ex024():
-    imp
+    print("Indisponível.")
+    # import pygame
+
+    # pygame.init()
+    # pygame.mixer.init()
+
+    # pygame.mixer.music.load("weird_fishes.mp3")
+    # pygame.mixer.music.play()
+    # pygame.event.wait()
+
+def ex025():
+    frase = input()
+
+    print(len(frase))
+
+    if 'Samuel' in frase:
+        print("Oi, Samuel.")
+
+
+    print(frase.upper())
+    print(frase.lower())
+
+def ex026():
+    frase = input("Digite uma frase:\n")
+    print(frase[3:10])
+    print("\n", frase[3:10:2])
+
+def salmo23():
+    print("""O Senhor é o meu pastor; de nada terei falta.
+
+2 Em verdes pastagens me faz repousar
+e me conduz a águas tranquilas;
+
+3 restaura-me o vigor.
+Guia-me nas veredas da justiça
+por amor do seu nome.
+
+4 Mesmo quando eu andar
+por um vale de trevas e morte,
+não temerei perigo algum, pois tu estás comigo;
+a tua vara e o teu cajado me protegem.
+
+5 Preparas um banquete para mim
+à vista dos meus inimigos.
+Tu me honras,
+ungindo a minha cabeça com óleo
+e fazendo transbordar o meu cálice.
+
+6 Sei que a bondade e a fidelidade
+me acompanharão todos os dias da minha vida,
+e voltarei à casa do Senhor enquanto eu viver.""")
+    
+def ex028():
+    nome = str(input("Digite seu nome completo:\n")).strip()
+
+    print(nome.upper())
+    print(nome.lower())
+    print(len(nome) - nome.count(" "))
+    print(nome.find(" "))
+    separa = nome.split()
+    print("{} tem {} letras.".format(separa[0], len(separa[0])))
+
+def ex029():
+    cid = str(input("Qual sua cidade?"))
+    cid = cid.lower()
+    print(cid.find("santo"))
+
+def ex030():
+    num = int(input("Informe um número:\n"))
+    u = num // 1 % 10
+    d = num // 10 % 10
+    c = num // 100 % 10
+    m = num // 1000 % 10
+
+    print("\nNúmero {}.".format(num))
+    print("Unidade: {}.".format(u))
+    print("Dezena: {}.".format(d))
+    print("Centena: {}.".format(c))
+    print("Milhar: {}.".format(m))
+
+
+    
+
+
+
+    
+
+
+    
 
 
 
@@ -295,5 +383,19 @@ while True:
             ex022()
         case 23:
             ex023()
+        case 24:
+            ex024()
+        case 25:
+            ex025()
+        case 26:
+            ex026()
+        case 27:
+            salmo23()
+        case 28:
+            ex028()
+        case 29:
+            ex029()
+        case 30:
+            ex030()
         case _:
             print("\nValor inválido. Tente novamente.")
