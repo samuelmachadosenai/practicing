@@ -296,7 +296,7 @@ def ex028():
 def ex029():
     cid = str(input("Qual sua cidade?"))
     cid = cid.lower()
-    print(cid.find("santo"))
+    print(cid[:5] == 'santo')
 
 def ex030():
     num = int(input("Informe um número:\n"))
