@@ -318,9 +318,13 @@ def ex031():
 
 def ex032():
     frase = str(input("Digite uma frase:\n")).lower().strip()
-    print(frase.count('a'))
+    print("A frase tem {} letras A.".format(frase.count('a')))
+    print("Primeira ocorrência: {}.\nÚltiima ocorrência: {}.".format(frase.find('a') + 1, frase.rfind('a') + 1))
 
-    
+
+
+def ex033():
+    a
 
 
 
