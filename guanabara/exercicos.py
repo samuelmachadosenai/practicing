@@ -294,7 +294,7 @@ def ex028():
     print("{} tem {} letras.".format(separa[0], len(separa[0])))
 
 def ex029():
-    cid = str(input("Qual sua cidade?"))
+    cid = str(input("Qual sua cidade?")).strip()
     cid = cid.lower()
     print(cid[:5] == 'santo')
 
@@ -311,6 +311,14 @@ def ex030():
     print("Centena: {}.".format(c))
     print("Milhar: {}.".format(m))
 
+def ex031():
+    n = str(input("Digite seu nome completo:\n")).strip()
+
+    print('silva' in n.lower())
+
+def ex032():
+    frase = str(input("Digite uma frase:\n")).lower().strip()
+    print(frase.count('a'))
 
     
 
@@ -360,7 +368,7 @@ while True:
         case 11:
             ex011()
         case 12:
-              ex012()
+            ex012()
         case 13:
             ex013()
         case 14:
@@ -397,5 +405,9 @@ while True:
             ex029()
         case 30:
             ex030()
+        case 31:
+            ex031()
+        case 32:
+            ex032()
         case _:
             print("\nValor inválido. Tente novamente.")
