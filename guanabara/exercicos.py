@@ -324,7 +324,8 @@ def ex032():
 
 
 def ex033():
-    a
+    n = str(input("Digite seu nome completo:\n")).split()
+    n
 
 
 
