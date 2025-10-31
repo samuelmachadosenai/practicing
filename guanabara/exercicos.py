@@ -324,24 +324,132 @@ def ex032():
 
 
 def ex033():
-    n = str(input("Digite seu nome completo:\n")).split()
-    n
+    n = str(input("Digite seu nome completo:\n")).strip()
+    n = n.split()
+    nome = n[0]
+    sobrenome = n[len(n) - 1]
+    print("Seu nome é", nome)
+    print("Seu sobrenome é", sobrenome)
 
+def ex034():
+    import random
 
+    n = random.randint(0, 5)
+    g = int(input("Adivinhe o número:\n"))
 
+    if g == n:
+        print("Você acertou. Parabéns!")
+    else:
+        print("Você errou.\nO computador venceu.")
+
+def ex035():
+    v = float(input("Informe a velocidade:\n"))
+
+    if v > 80.0:
+        over = v - 80.0
+        multa = 7 * over
+        print("Você foi multado.\nValor: R${:.2f}".format(multa))
+
+def ex036():
+    n = int(input("Digite um número:\n"))
     
+    if n % 2 == 0:
+        print("Par.")
+    else:
+        print("Ímpar.")
 
-
+def ex037():
+    d = float(input("Informe a distância da viagem (km):\n"))
+    p = float
+    if d < 200.0:
+        p = d * 0.50
+    else:
+        p = d * 0.45
     
+    print("Valor: R${:.2f}".format(p))
+
+def ex038():
+    from datetime import date
+    a = int(input("Que ano você quer analisar?\nDigite 0 para analisar o ano atual.\n"))
+    
+    if a == 0:
+        a = date.today().year
+    if a % 4 == 0 and a % 100 != 0 or a % 400 == 0:
+        print("{} é bissexto.".format(a))
+    else:
+        print("{} não é bissexto.".format(a))
 
 
+def ex039():
+    a = int(input("Digite um número:\n"))
+    b = int(input("Digite um número:\n"))
+    c =  int(input("Digite um número:\n"))
 
+    menor = a
+    if b < a and b < c:
+        menor = b
+    if c < a and c < b:
+        menor = c
 
+    maior = a
+    if b > a and b > c:
+        maior = b
+    if c > a and c > b:
+        maior = c
+    
+    print("O menor é", menor)
+    print("O maior é", maior)
+
+def ex040():
+    s = float(input("Informe seu salário:\n"))
+
+    if s > 1250.00:
+        a = s + (s * 0.10)
+    else:
+        a = s + (s * 0.15)
+
+    print("Total com aumento: R${:.2f}".format(a))
+
+def ex041():
+    r1 = float(input("Comprimento da reta:"))
+    r2 = float(input("Comprimento da reta:"))
+    r3 = float(input("Comprimento da reta:"))
+
+    if r1 + r2 > r3 and r1 + r3 > r2 and r2 + r3 > r1:
+        print("\033[32mPode formar um triângulo.\033[0m")
+      
+    else: 
+        print("\033[m31mNão pode.\033[0m")
+      
 
 
 # main
+cores = {
+    "reset": "\033[0m",
+    "preto": "\033[30m",
+    "vermelho": "\033[31m",
+    "verde": "\033[32m",
+    "amarelo": "\033[33m",
+    "azul": "\033[34m",
+    "magenta": "\033[35m",
+    "ciano": "\033[36m",
+    "branco": "\033[37m",
+
+    # Versões em negrito
+    "preto_b": "\033[1;30m",
+    "vermelho_b": "\033[1;31m",
+    "verde_b": "\033[1;32m",
+    "amarelo_b": "\033[1;33m",
+    "azul_b": "\033[1;34m",
+    "magenta_b": "\033[1;35m",
+    "ciano_b": "\033[1;36m",
+    "branco_b": "\033[1;37m",
+}
 
 
+
+
+print(f"{cores['vermelho_b']}-{cores['reset']}"*50)
 
 
 
@@ -414,5 +522,23 @@ while True:
             ex031()
         case 32:
             ex032()
+        case 33:
+            ex033()
+        case 34:
+            ex034()
+        case 35:
+            ex035()
+        case 36:
+            ex036()
+        case 37:
+            ex037()
+        case 38:
+            ex038()
+        case 39:
+            ex039()
+        case 40:
+            ex040()
+        case 41:
+            ex041()
         case _:
             print("\nValor inválido. Tente novamente.")
