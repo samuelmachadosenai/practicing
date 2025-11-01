@@ -416,11 +416,224 @@ def ex041():
     r3 = float(input("Comprimento da reta:"))
 
     if r1 + r2 > r3 and r1 + r3 > r2 and r2 + r3 > r1:
-        print("\033[32mPode formar um triângulo.\033[0m")
-      
+        print("\033[32mPode formar um triângulo.")
+        if r1 == r2 == r3:
+            print("Equilátero.")
+        elif r1 == r2 or r2 == r3 or r1 == r3:
+            print("Isósceles.")
+        else:
+            print("Escaleno.")
+
+        print("\033[0m")
     else: 
         print("\033[m31mNão pode.\033[0m")
       
+
+def ex042():
+
+    while True:
+        v = float(input("Qual o valor do empréstimo?\n"))
+        s = float(input("Qual o seu salário?\n"))
+        a = int(input("Em quantos anos você pretende pagar?\n"))
+
+        p = float
+        p = v / (a * 12)
+
+        if p > s * 0.30:
+            print(f"\n{cores['vermelho']}Empréstimo negado.{cores['reset']}")
+            break
+
+        elif p < s * 0.30:
+            print(f"{cores['verde']}")
+            print("\nEmpréstimo aprovado.\nParcelas: {}\nValor: R${:.2f}".format(a * 12, p))
+            print(f"{cores['reset']}")
+            break
+
+        else:
+            print(f"\n{cores['vermelho']}Inválido.\nTente novamente.\n{cores['reset']}")
+
+
+def ex043():
+    a = int(input("Digite um número inteiro:\n"))
+    b = int(input("Digite um número inteiro:\n"))
+    if a > b:
+        print("{} é maior que {}.".format(a, b))
+    elif b > a:
+        print("{} é maior que {}.".format(b, a))
+    else:
+        print("Os valores são iguais.")
+
+def ex044():
+    i = int(input("Digite sua idade:\n"))
+    
+    if i == 18:
+        print("Está na hora de se alistar.")
+    elif i < 18:
+        print("Você ainda vai se alistar.\nFaltam {} anos.".format(18 - i))
+    elif i > 18:
+        print("Já passou.\nFazem {} anos.".format(i - 18))
+
+def ex045():
+    n1 = float(input("Digite a nota:\n"))
+    n2 = float(input("Digite a nota:\n"))
+    
+    m = (n1 + n2) / 2
+
+    if m < 5.0:
+        print("Reprovado.")
+    elif m >= 5.0 and m <= 6.9:
+        print("Recuperação.")
+    elif m >= 7:
+        print("Aprovado.")
+
+def ex046():
+    i = int(input("Digite sua idade:\n"))
+    if i <= 9:
+        print("Mirim")
+    elif i <= 14:
+        print("Infantil.")
+    elif i <= 19:
+        print("Júnior")
+    elif i <= 20:
+        print("Sênior.")
+    else:
+        print("Master")
+
+def ex047():
+    v = float(input("Digite o valor do produto:\n"))
+    m = int(input("Método de pagamento:\n1. Dinheiro/Cheque.\n2. Cartão\n"))
+   
+    if m == 2:
+        t = 0
+        m = int(input("1. À vista\n2. Parcelado\n"))
+        if m == 1:
+            t = v - (v * 0.05)
+        elif m == 2:
+            m = int(input("Em quantas parcelas?\n1. 2x sem juros\n2. 3x ou mais"))   
+            if m == 1:
+                t = v
+            elif m == 2:
+                t = v + (v * 0.20)
+    
+    elif m == 1:
+        t = v - (v * 0.10)
+    
+    print("Total a pagar: R${:.2f}\n".format(t))
+
+def ex048():
+    import random
+
+    jogada = int(input("Sua jogada:\n0. Pedra\n1. Papel\n2. Tesoura\n"))
+    
+
+    pedra = "💎"
+    papel = "📄"
+    tesoura = "✂️"
+    
+    lista = [pedra, papel, tesoura]
+    cpu = random.choice(lista)
+   
+
+    if jogada == 0:
+        jogada = pedra
+    elif jogada == 1:
+        jogada = papel
+    elif jogada == 2:
+        jogada = tesoura
+
+    print("\nSua jogada:", jogada)
+    print("Jogada do computador:", cpu)
+
+    if jogada == pedra and cpu == papel or jogada == tesoura and cpu == pedra or jogada == papel and cpu == tesoura:
+            print("Derrota.")
+    elif jogada == cpu:
+            print("Empate.")
+    else: 
+            print("Vitória.")
+
+def ex049():
+        num = int(input("Digite um número inteiro:\n"))
+        opcao = int(input("""Escolha a base para conversão:
+        1. Binário
+        2. Octal
+        3. Hexadecimal\n"""))
+
+        if opcao == 1:
+            print(bin(num)[2:])
+        elif opcao == 2:
+            print(oct(num)[2:])
+        elif opcao == 3:
+            print(hex(num)[2:])
+
+def ex050():
+    for i in range(1, 50, +3):
+        print(i)
+
+def ex051():
+    n = int(input("Qual tabuada você quer?"))
+
+    for i in range(1, 11):
+        print(i, "X", n, "=", i * n)
+
+def ex052():
+
+    n = int(input("Digite um número:\n"))
+
+    if n % 1 == 0 and n % n == 0:
+        print(n, "é um número primo.")
+    elif n % 1 != 0 and n % n != 0:
+        print(n, "não é um número primo.")
+
+def ex053():
+    import time
+    for i in range(10, -1, -1):
+      
+        print(i)
+        time.sleep(0.5)
+    print("BOOM!!")
+
+def ex054():  
+    for n in range(1, 51):
+        if n % 2 == 0:
+            print(n, end=" ")
+
+
+def ex055():
+    soma = 0
+    n = 0
+    for i in range(1, 501, 2):
+        if i % 3 == 0:
+            n = n + 1
+            soma = soma + i
+    print(soma, n)
+
+def ex056():
+    soma = 0
+    contador = 0
+
+    for i in range(1, 7):
+        n = int(input("Digite um número:\n"))
+       
+
+        if n % 2 == 0:
+            soma += n
+            contador += 1
+
+    print(soma, contador)
+
+def ex057():
+    pt = int(input("Primeiro termo:\n"))
+    r = int(input("Razão:\n"))
+    d = pt + (10 - 1) * r
+    for i in range(pt, d + r, r):
+        print(i, end=" ")
+
+def ex058():
+    
+
+
+
+
 
 
 # main
@@ -540,5 +753,37 @@ while True:
             ex040()
         case 41:
             ex041()
+        case 42:
+            ex042()
+        case 43:
+            ex043()
+        case 44:
+            ex044()
+        case 45:
+            ex045()
+        case 46:
+            ex046()
+        case 47:
+            ex047()
+        case 48:
+            ex048()
+        case 49:
+            ex049()
+        case 50:
+            ex050()
+        case 51:
+            ex051()
+        case 52:
+            ex052()
+        case 53:
+            ex053()
+        case 54:
+            ex054()
+        case 55:
+            ex055()
+        case 56:
+            ex056()
+        case 57:
+            ex057()
         case _:
             print("\nValor inválido. Tente novamente.")
