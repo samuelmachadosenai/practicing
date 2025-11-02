@@ -629,7 +629,96 @@ def ex057():
         print(i, end=" ")
 
 def ex058():
+    num = int(input("Digite um número:"))
+    tot = 0
+    for i in range(1, num + 1):
+        if num % i == 0:
+            tot += 1
+            print(f"{cores['verde']}", end="")
+            
+        else:
+            print(f"{cores['reset']}", end="")
+
     
+        print(i, end=" ")
+    print(f"{cores['reset']}")
+    print("{} foi divisível {} vezes.".format(i, tot, end=""))
+    
+   
+
+    if tot > 2:
+        print("Não é primo.")
+    else: 
+        print("É primo.")
+
+
+def ex059():
+    frase = str(input("Digite uma frase:\n")).strip().upper()
+    palavras = frase.split()
+    junto = "".join(palavras)
+    inverso = ""
+    for letra in range(len(junto) - 1, -1, -1):
+        inverso += junto[letra]
+    
+    print(junto, inverso)
+
+    if junto == inverso:
+        print("\nÉ um palíndromo.")
+    else:
+        print("\nNão é um palíndromo.")
+    
+def ex060():
+    frase = str(input("Escreva uma frase\n")).upper().replace(" ", "")
+
+    if frase == frase[::-1]:
+        print("é um palíndromo")
+    else: 
+        print("\nNão é palindromo")
+    
+def ex061():
+
+    from datetime import date
+
+    atual = date.today().year
+    totmaj = 0
+    totmin = 0
+
+
+    for pess in range(1, 8):
+        nasc = int(input("Em que ano a {}° pessoa nasceu?".format(pess)))
+        idade = atual - nasc
+        
+        if idade >= 21:
+            totmaj += 1      
+        else:
+            totmin += 1
+
+    print("\n{} pessoas são menores de idade.\n{} são maiores de idade.".format(totmin, totmin))
+
+def ex062():
+
+    maior = 0
+    menor = 0
+
+    for peso in range(1, 5):
+        p = float(input("Digite seu peso:\n"))
+
+        if p == 1:
+            p = maior
+            p = menor
+        
+        else:
+            if peso > maior:
+                
+
+    
+
+    
+
+    
+            
+ 
+
 
 
 
@@ -785,5 +874,14 @@ while True:
             ex056()
         case 57:
             ex057()
+        case 58:
+            ex058()
+        case 59:
+            ex059()
+        case 60:
+            ex060()
+        case 61:
+            ex061()
         case _:
             print("\nValor inválido. Tente novamente.")
+            
