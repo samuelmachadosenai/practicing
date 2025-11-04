@@ -699,17 +699,25 @@ def ex062():
 
     maior = 0
     menor = 0
-
-    for peso in range(1, 5):
-        p = float(input("Digite seu peso:\n"))
+    ac = 0
+    for p in range(1, 6):
+        peso = float(input("Digite seu peso:\n"))
+        ac += 1
 
         if p == 1:
-            p = maior
-            p = menor
+            maior = p
+            menor = p
         
         else:
             if peso > maior:
-                
+                maior = peso
+            if peso < menor:
+                menor = peso
+    
+    print("Dos {} pesos, {:.1f} é o maior e {:.1f} é o menor.".format(ac, maior, menor))
+
+    
+
 
     
 
@@ -882,6 +890,8 @@ while True:
             ex060()
         case 61:
             ex061()
+        case 62:
+            ex062()
         case _:
             print("\nValor inválido. Tente novamente.")
             
