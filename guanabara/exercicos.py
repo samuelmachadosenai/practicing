@@ -699,16 +699,18 @@ def ex062():
 
     maior = 0
     menor = 0
+    ac = 0
 
     for peso in range(1, 5):
         p = float(input("Digite seu peso:\n"))
 
         if p == 1:
-            p = maior
-            p = menor
+            maior = p
+            menor = p
         
         else:
             if peso > maior:
+            
                 
 
     
