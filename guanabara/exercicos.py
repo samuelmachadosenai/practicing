@@ -697,19 +697,64 @@ def ex061():
 
 def ex062():
 
-    maior = 0
+    # inicializa variáveis globais para q elas existam fora do laço
+    maior = 0 
     menor = 0
-    ac = 0
+  
 
-    for peso in range(1, 5):
-        p = float(input("Digite seu peso:\n"))
+    for p in range(1, 6): # vai fazer as ações aqui dentro 5 vezes
+        peso = float(input("Digite seu peso:\n"))
 
-        if p == 1:
-            maior = p
-            menor = p
+        if p == 1: # quando fizer o primeiro loop (p), maior e menor receberão o primeiro peso (peso)
+            maior = peso
+            menor = peso
         
-        else:
+        else: #se não for o primeiro loop, então aqui vai haver comparação com o valor atribuído acima, se o peso for maior, se tornará o novo valor de peso
             if peso > maior:
+                maior = peso
+            if peso < menor:
+                menor = peso
+
+
+    # variáveis aqui só puderam ser impressas pq são globais
+    print("Dos {} pesos, {:.1f}kg foi o maior e {:.1f}kg foi o menor.".format(p, maior, menor))
+
+def ex063():
+
+    maior = 0
+  
+    m = 0
+    f = 0
+    somaidade = 0
+    media = 0
+    for pess in range(1, 5):
+        print("---- {}°  Pessoa ----".format(pess))
+        nome = str(input("Nome: ")).strip().capitalize()
+        idade = int(input("Idade: "))
+        sexo = str(input("Sexo [M/F]: ")).strip().upper()
+        
+        somaidade += idade
+        media = somaidade / 4
+
+        if sexo == 'F' and idade < 20:
+            f += 1
+
+        elif sexo == 'M':
+            m += 1
+            maior = idade
+
+        else:
+            if idade > maior:
+                maior = idade
+
+        # if idade == maior:
+
+        # elif sexo == 'F' and idade < 20:
+        #     fmenos += 1
+   
+        # print("\nA média de idade do grupo é {:.1f}.\nO homem mais velho tem {} anos.\nAo todo são {} muheres com mais de 20 anos.".format(media, maior, f))
+
+
             
                 
 
@@ -884,6 +929,10 @@ while True:
             ex060()
         case 61:
             ex061()
+        case 62:
+            ex062()
+        case 63:
+            ex063()
         case _:
             print("\nValor inválido. Tente novamente.")
             
