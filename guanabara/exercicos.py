@@ -1,6 +1,12 @@
+import random
+
+
 #1
 
 def ex001():
+
+    random.choice(cores["amarelo", "azul"])
+
     while True:
         print('Olá, mundo.')
         break
@@ -721,39 +727,43 @@ def ex062():
 
 def ex063():
 
-    maior = 0
-  
-    m = 0
+    maiorid = 0
+    nomevelho = ""
     f = 0
     somaidade = 0
     media = 0
+
     for pess in range(1, 5):
         print("---- {}°  Pessoa ----".format(pess))
         nome = str(input("Nome: ")).strip().capitalize()
         idade = int(input("Idade: "))
         sexo = str(input("Sexo [M/F]: ")).strip().upper()
         
+        #soma todas as idades que o input pega
         somaidade += idade
-        media = somaidade / 4
-
+        
+        #acumula o número de mulheres com idade abaixo de 20
         if sexo == 'F' and idade < 20:
             f += 1
 
-        elif sexo == 'M':
-            m += 1
-            maior = idade
 
-        else:
-            if idade > maior:
-                maior = idade
+        #pega o
+        if pess == 1 and sexo == 'M':
+            maiorid = idade
+            nomevelho = nome
 
-        # if idade == maior:
 
-        # elif sexo == 'F' and idade < 20:
-        #     fmenos += 1
-   
-        # print("\nA média de idade do grupo é {:.1f}.\nO homem mais velho tem {} anos.\nAo todo são {} muheres com mais de 20 anos.".format(media, maior, f))
+        if sexo == 'M' and idade > maiorid:
+            maiorid = idade
+            nomevelho = nome
 
+        
+    media = somaidade / 4
+    print("\nA média de idade do grupo é {:.1f}.\nO homem mais velho tem {} anos e seu nome é {}.\nAo todo são {} mulheres com menos de 20 anos.".format(media, maiorid, nomevelho, f))
+
+
+def ex064():
+    e
 
             
                 
@@ -772,7 +782,7 @@ def ex063():
 
 
 
-# main
+# main CORES
 cores = {
     "reset": "\033[0m",
     "preto": "\033[30m",
@@ -804,7 +814,7 @@ print(f"{cores['vermelho_b']}-{cores['reset']}"*50)
 
 while True:
 
-    opcao = int(input("\nMENU PRINCIPAL\nInsira o exercício a ser executado (1-100):\n"))
+    opcao = int(input(f"{cores['ciano']}\nMENU PRINCIPAL\nInsira o exercício a ser executado (1-100):\n{cores['reset']}"))
 
     match opcao:
         case 1:
@@ -933,6 +943,8 @@ while True:
             ex062()
         case 63:
             ex063()
+        case 64:
+            ex064()
         case _:
             print("\nValor inválido. Tente novamente.")
             
