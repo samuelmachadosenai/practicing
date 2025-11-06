@@ -1,11 +1,33 @@
 import random
 
 
+cores2 = [
+    "\033[30m",
+    "\033[31m",
+    "\033[32m",
+    "\033[33m",
+    "\033[34m",
+    "\033[35m",
+    "\033[36m",
+    "\033[37m",
+    "\033[1;30m",
+    "\033[1;31m",
+    "\033[1;32m",
+    "\033[1;33m",
+    "\033[1;34m",
+    "\033[1;35m",
+    "\033[1;36m",
+    "\033[1;37m",
+]
+
+
+
 #1
 
 def ex001():
 
-    random.choice(cores["amarelo", "azul"])
+    cor = random.choice(cores2)
+    print(cor)
 
     while True:
         print('Olá, mundo.')
@@ -14,12 +36,16 @@ def ex001():
 #2 
 
 def ex002():
+    cor = random.choice(cores2)
+    print(cor)
     msg = "Olá, mundo."
     print(msg)
 
 #3
 
 def ex003():
+    cor = random.choice(cores2)
+    print(cor)
     nome = input("Digite seu nome:\n")
     print("É um prazer te conhecer, {}!".format(nome))
 
@@ -35,6 +61,7 @@ def ex004():
 #5
 
 def ex005():
+    print(cor)
     a = input("Digite alguma coisa:\n")
     print("O tipo primitivo desse valor é", type(a))
     print("Só tem espaços?", a.isspace())
@@ -52,6 +79,7 @@ def ex005():
 
 
 def ex006():
+    print(cor)
     a = int(input("Qual a raiz quadrada de:\n"))
     raiz = a ** (1/2)
     print("A raiz de quadrada {} é {}.".format(a, raiz))
@@ -98,6 +126,7 @@ def ex009():
 
 
 def ex010():
+        print(cor)
         num1 = float(input("Digite a primeira nota:\n"))
         num2 = float(input("Digite a segunda nota:\n"))
 
@@ -105,6 +134,7 @@ def ex010():
 
 
 def ex011():
+        print(cor)
         medida = float(input("Uma distância em metros:\n"))
         km = medida / 1000
         cm = medida * 100
@@ -762,11 +792,157 @@ def ex063():
     print("\nA média de idade do grupo é {:.1f}.\nO homem mais velho tem {} anos e seu nome é {}.\nAo todo são {} mulheres com menos de 20 anos.".format(media, maiorid, nomevelho, f))
 
 
-def ex064():
-    e
+def soma_pares():
+
+    soma1 = 0
+    soma2 = 0
+    par = 0
+    impar = 0
+    impares = []
+    pares = []
+
+    for i in range(1, 6):
+        num = int(input("digite um numiro"))
+
+        if num % 2 == 0:
+            soma1 += num
+            par += 1
+            pares.append(num)
+        else:
+            soma2 += num
+            impar += 1
+            impares.append(num)
+
+
+    print("qtd de numeros pares {}, soma {}, numeros pares {}\nqtd de numeros impares {}, soma {}, numeros impares {}".format(par, soma1, pares, impar, soma2, impares))
 
             
+def notas():
+
+
+    acima = []
+    abaixo = []
+    aba = 0
+    aci = 0
+    medias = []
+
+    for i in range(1, 6):
+        nome = str(input("Nome do aluno: "))
+        nota1 = float(input("Nota 1: "))
+        nota2 = float(input("Nota 2: "))
+
+        media = nota1 + nota2 / 2
+
+        if media >= 7:
+            acima.append(nome)
+            aci += 1
+            medias.append(media)
+        else: 
+            abaixo.append(nome)
+            aba += 1
+
+    print("alunos:", acima, "respectivas notas:", medias)
+ 
+
+def ex064():
+
+    sexo = ""
+
+    while sexo != "M" and sexo != "F":
+        sexo = str(input("Você é homem ou mulher? [F/M]")).upper()
+          
+    
+    print("Acabou.")
+
+def ex065():
+
+    import random
+
+    num = random.randint(0, 10)
+
+    palp = 0
+
+    choice = 11
+
+    while choice != num:
+        choice = int(input("Adivinhe o número: "))
+        palp += 1
+        
+
+    print("\nAcertou, o número é {}\nTotal de palpites: {}".format(num, palp))
+
+
+def ex066():
+    num1 = int(input("Digite um número:\n"))
+    num2 = int(input("Digite um número>\n"))
+
+    
+    c = 0
+    while c != 5:
+        c = int(input(f"""{"-" * 12}Menu{"-"*12}
+          
+        Escolha uma operação:
+          
+        1. Somar
+        2. Multipicar
+        3. Maior
+        4. Novos números
+        5. Sair do programa\n"""))
+
+        if c == 1:
+            print(num1+num2)
+
+        
+        if c == 2:
+            print(num1*num2)
+        if c == 3:
+            if num1 > num2:
+                print("Maior:", num1)
+            elif num1 == num2:
+                print("São iguais.")
+            else:
+                print("Maior:", num2)
                 
+
+        if c == 4:
+            num1 = int(input("Digite um número:\n"))
+            num2 = int(input("Digite um número:\n"))
+    
+def ex067():
+    #fatorial
+    n = int(input("Digite um número:\n"))
+    c = n
+    f =  1
+
+    while c > 0:
+        
+        print("{}".format(c), end="")
+        print(" X " if c > 1 else " = ", end="")
+        f *= c
+        c -= 1
+        
+    print("{}".format(f))
+
+def ex068():
+    num = 0
+    somas = 0
+    numeros = 0
+
+    while num != 999:
+        num = int(input("Digite um número:\n"))
+
+
+        print(num)
+
+        numeros += 1
+
+        somas += num
+
+
+    print("Números digitados: {}\nTotal das somas: {}".format(numeros - 1, somas - 999))
+
+
+
 
     
 
@@ -775,7 +951,6 @@ def ex064():
     
             
  
-
 
 
 
@@ -804,7 +979,6 @@ cores = {
     "ciano_b": "\033[1;36m",
     "branco_b": "\033[1;37m",
 }
-
 
 
 
@@ -945,6 +1119,24 @@ while True:
             ex063()
         case 64:
             ex064()
+        case 65:
+            ex065()
+        case 66:
+            ex066()
+        case 67:
+            ex067()
+        case 68:
+            ex068()
+
+
+
+
+
+
+        case 100:
+            soma_pares()
+        case 200:
+            notas()
         case _:
             print("\nValor inválido. Tente novamente.")
             
