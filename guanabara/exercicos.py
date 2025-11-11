@@ -941,6 +941,23 @@ def ex068():
 
     print("Números digitados: {}\nTotal das somas: {}".format(numeros - 1, somas - 999))
 
+def ex069():
+
+    primeiro = int(input("primeiro termo\n"))
+    razao = int(input("razão\n"))
+
+    termo = primeiro
+    cont = 1
+    
+    while cont <= 10:
+        print("{} --> ".format(termo), end="")
+        termo += razao
+        cont += 1
+    print("FIM")
+
+
+
+
 
 
 
@@ -1127,6 +1144,8 @@ while True:
             ex067()
         case 68:
             ex068()
+        case 69:
+            ex069()
 
 
 
