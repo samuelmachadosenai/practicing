@@ -955,7 +955,7 @@ def ex069():
         cont += 1
     print("FIM")
 
-
+def ex070():
 
 
 
