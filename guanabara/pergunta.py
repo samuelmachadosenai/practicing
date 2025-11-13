@@ -1,6 +1,7 @@
-frase = str(input("escreva algo\n"))
+# frase = str(input("escreva algo\n"))
 
-if frase.endswith('?') == True:
-    print("Vc perguntou algo.")
+# if frase.endswith('?') == True:
+#     print("Vc perguntou algo.")
+
 
 

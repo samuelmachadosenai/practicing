@@ -956,6 +956,13 @@ def ex069():
     print("FIM")
 
 def ex070():
+    t = int(input("quantos termos vc quer ver"))
+    n = 0
+
+    while cont <= n:
+        print("{} --> ".format(t, end=""))
+        t += 1
+        n 
 
 
 
