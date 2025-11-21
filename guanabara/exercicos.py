@@ -1,4 +1,5 @@
 import random
+import os
 
 
 cores2 = [
@@ -1165,4 +1166,3 @@ while True:
             notas()
         case _:
             print("\nValor inválido. Tente novamente.")
-            

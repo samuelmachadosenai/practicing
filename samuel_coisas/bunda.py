@@ -1,8 +1,11 @@
 import random
+import time
+import os
 
 def repetidor_de_frases():
 
     while True:
+        os.system("cls")
         frase = input("Digite a frase:\n")
         uservezes = int(input("Defina o número de vezes a ser repetida:\n"))
         vezes = 1
@@ -11,6 +14,7 @@ def repetidor_de_frases():
             print("Acima do limite. Tente novamente.\n")
         else:
             while vezes <= uservezes:
+                time.sleep(2)
                 print(frase)
                 vezes += 1
 
@@ -25,62 +29,78 @@ def repetidor_de_frases():
         
 
 def acerte_a_conta():
+    score = 0
+    
+    # Adicionar sistema de SCORE (acerto +1, erro -1)
+
 
     while True:
-        a = random.randint(1, 100)
-        b = random.randint(1, 100)
-        r = 0
-        operacao = int(input("\nEscolha uma operação:\n1. Soma\n2. Substração\n3. Multiplicação\n4. Divisão\n"))
+        os.system("cls")
+        print("SCORE:", score)
+        while True:
+            
 
-        match operacao:
-            case 1:
-                r = int(input("\nQuanto é {} mais {}?\n".format(a, b)))
-                if r != (a + b):
-                    print("Errado.\nVocê é burro.\nO resultado é {}.".format(a + b))
-                else:
-                    print("Mandou bem!\nO resultado é {}.".format(a + b))
+            
+            a = random.randint(1, 100)
+            b = random.randint(1, 100)
+            r = 0
+            operacao = int(input("\nEscolha uma operação:\n1. Soma\n2. Substração\n3. Multiplicação\n4. Divisão\n"))
+
+            match operacao:
+                case 1:
+                    r = int(input("\nQuanto é {} mais {}?\n".format(a, b)))
+                    if r != (a + b):
+                        print("Errado.\nVocê é burro.\nO resultado é {}.".format(a + b))
+
+                    else:
+                        print("Mandou bem!\nO resultado é {}.".format(a + b))
+                        score += 1
+                    
+
+                case 2:
+                    r = int(input("\nQuanto é {} menos {}?\n".format(a, b)))
+                    if r != (a-b):
+                        print("Errado.\nVocê é burro.\nO resultado é {}.".format(a - b))
+                    else:
+                        print("Mandou bem!\nO resultado é {}.".format(a - b))
+                        score += 1
+                case 3:
+                    r = int(input("Quanto é {} multiplicado por {}?\n".format(a, b)))
+                    if r != (a*b):
+                        print("Errado.\nVocê é burro.\nO resultado é {}.".format(a*b))
+                    else:
+                        print("Mandou bem!\nO resultado é {}.".format(a*b))
+                        score += 1
+
+                case 4: 
+                    r = int(input("Quanto é {} dividido por {}?\n".format(a, b)))
+                    if r != (a/b):
+                        print("Errado.\nVocê é burro.\nO resultado é {}.".format(a/b))
+                    else:
+                        print("Mandou bem!\nO resultado é {}.".format(a/b))
+                
+                case 5:
+                    r = int(input("Qual a raiz quadrada de {}?\n".format(a)))
+                    if r != (a ** (1/2)):
+                        print("Errado.\nVocê é burro.\nO resultado é {}.".format(a ** (1/2)))
+                    else:
+                        print("Mandou bem!\nO resultado é {}.".format(a ** (1/2)))
+                        score += 1
                 
 
-            case 2:
-                r = int(input("\nQuanto é {} menos {}?\n".format(a, b)))
-                if r != (a-b):
-                    print("Errado.\nVocê é burro.\nO resultado é {}.".format(a - b))
-                else:
-                    print("Mandou bem!\nO resultado é {}.".format(a - b))
-            case 3:
-                r = int(input("Quanto é {} multiplicado por {}?\n".format(a, b)))
-                if r != (a*b):
-                    print("Errado.\nVocê é burro.\nO resultado é {}.".format(a*b))
-                else:
-                    print("Mandou bem!\nO resultado é {}.".format(a*b))
-
-            case 4: 
-                r = int(input("Quanto é {} dividido por {}?\n".format(a, b)))
-                if r != (a/b):
-                    print("Errado.\nVocê é burro.\nO resultado é {}.".format(a/b))
-                else:
-                    print("Mandou bem!\nO resultado é {}.".format(a/b))
-            
-            case 5:
-                r = int(input("Qual a raiz quadrada de {}?\n".format(a)))
-                if r != (a ** (1/2)):
-                    print("Errado.\nVocê é burro.\nO resultado é {}.".format(a ** (1/2)))
-                else:
-                    print("Mandou bem!\nO resultado é {}.".format(a ** (1/2)))
-            
 
 
-
-        opcao = int(input("\n1. Outra operação\n0 - Voltar ao Menu.\n"))
-        if opcao == 1:
-            acerte_a_conta()
-        else:
-            break
+            opcao = int(input("\n1. Outra operação\n0 - Voltar ao Menu.\n"))
+            if opcao == 1:
+                acerte_a_conta()
+            else:
+                break
 
 
 def elogiador():
     while True:
-        g = int(input("Você é menino ou menina?\n1. Menino\n2. Menina\n3. Sou um alien\n"))
+        os.system("cls")
+        g = int(input("Você é menino ou menina?\n1. Menino\n2. Menina\n0. Voltar ao menu principal\n"))
 
         if g == 1:
             while True:
@@ -121,7 +141,7 @@ def elogiador():
 # MAIN
 while True:
 
-    
+    os.system("cls")
     print("\n", "="*20, "Coisas Inúteis", "="*20)
     print("Selecione uma opção\n", end="             :)")
     print("\n1. Repetidor de frase\n2. Gerador de operação\n3. Algoritmo elogiador")
