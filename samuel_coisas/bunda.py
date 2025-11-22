@@ -157,8 +157,6 @@ def cpf_checker():
             time.sleep(1)
             print("Checando..")
             time.sleep(1)
-            print("Checando...")
-            time.sleep(1.5)
             cont += 1
 
         while True:
