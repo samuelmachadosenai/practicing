@@ -14,7 +14,7 @@ def repetidor_de_frases():
             print("Acima do limite. Tente novamente.\n")
         else:
             while vezes <= uservezes:
-                time.sleep(2)
+                time.sleep(1)
                 print(frase)
                 vezes += 1
 
@@ -54,7 +54,7 @@ def acerte_a_conta():
 
                     else:
                         print("Mandou bem!\nO resultado é {}.".format(a + b))
-                        score += 1
+                        
                     
 
                 case 2:
@@ -63,14 +63,14 @@ def acerte_a_conta():
                         print("Errado.\nVocê é burro.\nO resultado é {}.".format(a - b))
                     else:
                         print("Mandou bem!\nO resultado é {}.".format(a - b))
-                        score += 1
+                
                 case 3:
                     r = int(input("Quanto é {} multiplicado por {}?\n".format(a, b)))
                     if r != (a*b):
                         print("Errado.\nVocê é burro.\nO resultado é {}.".format(a*b))
                     else:
                         print("Mandou bem!\nO resultado é {}.".format(a*b))
-                        score += 1
+                     
 
                 case 4: 
                     r = int(input("Quanto é {} dividido por {}?\n".format(a, b)))
@@ -85,7 +85,7 @@ def acerte_a_conta():
                         print("Errado.\nVocê é burro.\nO resultado é {}.".format(a ** (1/2)))
                     else:
                         print("Mandou bem!\nO resultado é {}.".format(a ** (1/2)))
-                        score += 1
+           
                 
 
 
@@ -95,7 +95,6 @@ def acerte_a_conta():
                 acerte_a_conta()
             else:
                 break
-
 
 def elogiador():
     while True:
@@ -144,7 +143,7 @@ while True:
     os.system("cls")
     print("\n", "="*20, "Coisas Inúteis", "="*20)
     print("Selecione uma opção\n", end="             :)")
-    print("\n1. Repetidor de frase\n2. Gerador de operação\n3. Algoritmo elogiador")
+    print("\n1. Repetidor de frase\n2. Gerador de operação\n3. Algoritmo elogiador\n4. Pedra Papel Tesoura")
     opcao = int(input())
 
     match opcao:
@@ -154,7 +153,41 @@ while True:
             acerte_a_conta()
         case 3:
             elogiador()
+        case 4:
+            pedra_papel_tesoura()
 
+
+
+    cpf_str = str(input("Digite seu CPF (sem pontuação):\n"))
+    #123234345
+    lista = []
+
+    n1 = int(cpf_str[0])
+    n2 = int(cpf_str[1])
+    n3 = int(cpf_str[2])
+    n4 = int(cpf_str[3])
+    n5 = int(cpf_str[4])
+    n6 = int(cpf_str[5])
+    n7 = int(cpf_str[6])
+    n8 = int(cpf_str[7])
+    n9 = int(cpf_str[8])
+
+    n1 *= 1
+    n2 *= 2
+    n3 *= 3
+    n4 *= 4
+    n5 *= 5
+    n6 *= 6
+    n7 *= 7
+    n8 *= 8
+    n9 *= 9
+
+    numero_final = n1 + n2 + n3 + n4 + n5 + n6 + n7 + n8 + n9
+
+    print(numero_final)
+
+
+    # lista.append(n1, n2, n3, n4, n5, n6, n7, n8, n9)
 
 
 
