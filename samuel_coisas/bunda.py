@@ -141,7 +141,7 @@ def cpf_checker():
     # código de neandertal do caralhooooo
 
     while True:
-        # os.system("cls")
+        os.system("cls")
         cpf_str = str(input("Digite seu CPF:\n")).strip()
         cpf_str = cpf_str.replace(".", "")
         cpf_str = cpf_str.replace("-", "")
