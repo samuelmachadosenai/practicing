@@ -1,8 +1,12 @@
-# import os
+import os
 
 # Funções
 
-def par_ou_impar(numero): 
+def par_ou_impar(numero):
+
+    if numero
+
+
     if numero % 2 == 0:
         print("O número é par")
     else:
@@ -23,10 +27,11 @@ def countdown(numero):
         print(i)
 
 # Programa principal
+def main():
     num = int(input("Digite um número:"))
     print("Escolha uma opção:")           
     print("a) Verificar se um número é par ou ímpar")
-    print("b) Comparar dois números")
+    print("b) Ver maior e menor")
     print("c) Mostrar a tabuada de um número")
     print("d) Contagem regressiva")
     opcao = input()
@@ -42,13 +47,17 @@ def countdown(numero):
     elif opcao == "d":
         countdown(num)
 
+while True:
+    main()
 
 
-    # while True:
-    #     a = input("Tentar novamente?\n1. Sim\n0. Não")
-    #     if a == 1:
-    #         # os.system("cls")
-    #     # else:
-    #         # os.system("cls")
-    #         print("Encerrado.")
-    #     break
+
+    while True:
+        a = int(input("Tentar novamente?\n1. Sim\n0. Não\n"))
+        if a == 1:
+            os.system("cls")
+            main()
+        else:
+            os.system("cls")
+            print("Encerrado.")
+        break

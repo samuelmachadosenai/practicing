@@ -46,14 +46,19 @@ def acerte_a_conta():
             r = 0
             operacao = int(input("\nEscolha uma operação:\n1. Soma\n2. Substração\n3. Multiplicação\n4. Divisão\n"))
 
+            
+
             match operacao:
                 case 1:
                     r = int(input("\nQuanto é {} mais {}?\n".format(a, b)))
                     if r != (a + b):
                         print("Errado.\nVocê é burro.\nO resultado é {}.".format(a + b))
+                        
 
                     else:
                         print("Mandou bem!\nO resultado é {}.".format(a + b))
+                        mais()
+                        
                         
                     
 
@@ -63,6 +68,7 @@ def acerte_a_conta():
                         print("Errado.\nVocê é burro.\nO resultado é {}.".format(a - b))
                     else:
                         print("Mandou bem!\nO resultado é {}.".format(a - b))
+                        mais()
                 
                 case 3:
                     r = int(input("Quanto é {} multiplicado por {}?\n".format(a, b)))
@@ -70,6 +76,7 @@ def acerte_a_conta():
                         print("Errado.\nVocê é burro.\nO resultado é {}.".format(a*b))
                     else:
                         print("Mandou bem!\nO resultado é {}.".format(a*b))
+                        mais()
                      
 
                 case 4: 
@@ -78,6 +85,7 @@ def acerte_a_conta():
                         print("Errado.\nVocê é burro.\nO resultado é {}.".format(a/b))
                     else:
                         print("Mandou bem!\nO resultado é {}.".format(a/b))
+                        mais()
                 
                 case 5:
                     r = int(input("Qual a raiz quadrada de {}?\n".format(a)))
@@ -85,6 +93,7 @@ def acerte_a_conta():
                         print("Errado.\nVocê é burro.\nO resultado é {}.".format(a ** (1/2)))
                     else:
                         print("Mandou bem!\nO resultado é {}.".format(a ** (1/2)))
+                        mais()
            
                 
 
