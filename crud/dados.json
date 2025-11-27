@@ -1,0 +1,72 @@
+{
+    "samuca": {
+        "nome": "12121212",
+        "idade": 43,
+        "cpf": "323434",
+        "data de criacao": "2025-11-27",
+        "horario de criacao": "05:40:41.329077"
+    }
+}{
+    "samu": {
+        "id": "48-35-28",
+        "data de criacao": "2025-11-27",
+        "horario de criacao": "06:02:39.413212"
+    }
+}{
+    "samu": {
+        "id": "36-58-33",
+        "status": "ativo",
+        "data de criacao": "2025-11-27",
+        "horario de criacao": "06:25:53.611012"
+    }
+}{
+    "sa": {
+        "id": "19-67-62",
+        "status": "ativo",
+        "data de criacao": "2025-11-27",
+        "horario de criacao": "07:00:45.813810"
+    }
+}{
+    "sam": {
+        "id": "60-57-31",
+        "status": "ativo",
+        "data de criacao": "2025-11-27",
+        "horario de criacao": "07:01:31.597707"
+    }
+}{
+    "usuario": {
+        "nome": "sa",
+        "senha": "12",
+        "id": "43-17-70",
+        "status": "ativo",
+        "data de criacao": "2025-11-27",
+        "horario de criacao": "07:15:58.963044"
+    }
+}{
+    "usuario": {
+        "nome": "sa",
+        "senha": "12",
+        "id": "22-36-45",
+        "status": "ativo",
+        "data de criacao": "2025-11-27",
+        "horario de criacao": "07:21:59.218074"
+    }
+}{
+    "usuario": {
+        "nome": "SAmuel",
+        "senha": "4545454",
+        "id": "69-53-52",
+        "status": "ativo",
+        "data de criacao": "2025-11-27",
+        "horario de criacao": "19:28:25.225698"
+    }
+}{
+    "usuario": {
+        "nome": "asasasaaaaaa",
+        "senha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "id": "45-63-44",
+        "status": "ativo",
+        "data de criacao": "2025-11-27",
+        "horario de criacao": "19:39:06.287788"
+    }
+}

@@ -5,15 +5,29 @@ import time
 
 usuario = None
 
-
+def loading():
+    while True:
+        
+        os.system("cls")
+        print(".\n")
+        time.sleep(0.8)
+        os.system("cls")
+        print("..\n")
+        time.sleep(0.8)
+        os.system("cls")
+        print("...\n")
+        time.sleep(0.9)
+        os.system("cls")
+        break
 
 
 
 def criar():
-    os.system("cls")
+    loading()
     global usuario
     usuario = c.User.criar_user()
     j.salvar_user()
+
     # global log
     # log = c.User.dic
     print(c.User.users_info, "\n")
@@ -21,8 +35,9 @@ def criar():
 
 
 
+
 def login():
-    os.system("cls")
+    loading()
     print("1. Logar")
     print("2. Criar usuário")
     o = int(input())
@@ -38,23 +53,12 @@ def login():
             break
 
 def menu():
-    os.system("cls")
+    loading()
+    print("-"*24, "\nMENU FODA")
     # print(valor)
 
-
-while True:
-    
-    print(".\n")
-    time.sleep(0.8)
-    os.system("cls")
-    print("..\n")
-    time.sleep(0.8)
-    os.system("cls")
-    print("...\n")
-    time.sleep(0.8)
-    break
-
 login()
+menu()
 
 
 # valor = log["nome"]
