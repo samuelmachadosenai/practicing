@@ -110,4 +110,13 @@ def gerar_id():
     random.shuffle(lista)
 
     id = "-".join(lista)
-    return id
+    status = "ativo"
+    return id, status
+
+def name_checker(name):
+
+    if len(name) <= 12:
+        return True
+    else:
+        return False
+        
