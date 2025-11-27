@@ -1,8 +1,11 @@
 import random
+import time
+import os
 
 def repetidor_de_frases():
 
     while True:
+        os.system("cls")
         frase = input("Digite a frase:\n")
         uservezes = int(input("Defina o número de vezes a ser repetida:\n"))
         vezes = 1
@@ -11,6 +14,7 @@ def repetidor_de_frases():
             print("Acima do limite. Tente novamente.\n")
         else:
             while vezes <= uservezes:
+                time.sleep(1)
                 print(frase)
                 vezes += 1
 
@@ -25,62 +29,86 @@ def repetidor_de_frases():
         
 
 def acerte_a_conta():
+    score = 0
+    
+    # Adicionar sistema de SCORE (acerto +1, erro -1)
+
 
     while True:
-        a = random.randint(1, 100)
-        b = random.randint(1, 100)
-        r = 0
-        operacao = int(input("\nEscolha uma operação:\n1. Soma\n2. Substração\n3. Multiplicação\n4. Divisão\n"))
+        os.system("cls")
+        print("SCORE:", score)
+        while True:
+            
 
-        match operacao:
-            case 1:
-                r = int(input("\nQuanto é {} mais {}?\n".format(a, b)))
-                if r != (a + b):
-                    print("Errado.\nVocê é burro.\nO resultado é {}.".format(a + b))
-                else:
-                    print("Mandou bem!\nO resultado é {}.".format(a + b))
+            
+            a = random.randint(1, 100)
+            b = random.randint(1, 100)
+            r = 0
+            operacao = int(input("\nEscolha uma operação:\n1. Soma\n2. Substração\n3. Multiplicação\n4. Divisão\n"))
+
+            
+
+            match operacao:
+                case 1:
+                    r = int(input("\nQuanto é {} mais {}?\n".format(a, b)))
+                    if r != (a + b):
+                        print("Errado.\nVocê é burro.\nO resultado é {}.".format(a + b))
+                        
+
+                    else:
+                        print("Mandou bem!\nO resultado é {}.".format(a + b))
+                        mais()
+                        
+                        
+                    
+
+                case 2:
+                    r = int(input("\nQuanto é {} menos {}?\n".format(a, b)))
+                    if r != (a-b):
+                        print("Errado.\nVocê é burro.\nO resultado é {}.".format(a - b))
+                    else:
+                        print("Mandou bem!\nO resultado é {}.".format(a - b))
+                        mais()
+                
+                case 3:
+                    r = int(input("Quanto é {} multiplicado por {}?\n".format(a, b)))
+                    if r != (a*b):
+                        print("Errado.\nVocê é burro.\nO resultado é {}.".format(a*b))
+                    else:
+                        print("Mandou bem!\nO resultado é {}.".format(a*b))
+                        mais()
+                     
+
+                case 4: 
+                    r = int(input("Quanto é {} dividido por {}?\n".format(a, b)))
+                    if r != (a/b):
+                        print("Errado.\nVocê é burro.\nO resultado é {}.".format(a/b))
+                    else:
+                        print("Mandou bem!\nO resultado é {}.".format(a/b))
+                        mais()
+                
+                case 5:
+                    r = int(input("Qual a raiz quadrada de {}?\n".format(a)))
+                    if r != (a ** (1/2)):
+                        print("Errado.\nVocê é burro.\nO resultado é {}.".format(a ** (1/2)))
+                    else:
+                        print("Mandou bem!\nO resultado é {}.".format(a ** (1/2)))
+                        mais()
+           
                 
 
-            case 2:
-                r = int(input("\nQuanto é {} menos {}?\n".format(a, b)))
-                if r != (a-b):
-                    print("Errado.\nVocê é burro.\nO resultado é {}.".format(a - b))
-                else:
-                    print("Mandou bem!\nO resultado é {}.".format(a - b))
-            case 3:
-                r = int(input("Quanto é {} multiplicado por {}?\n".format(a, b)))
-                if r != (a*b):
-                    print("Errado.\nVocê é burro.\nO resultado é {}.".format(a*b))
-                else:
-                    print("Mandou bem!\nO resultado é {}.".format(a*b))
-
-            case 4: 
-                r = int(input("Quanto é {} dividido por {}?\n".format(a, b)))
-                if r != (a/b):
-                    print("Errado.\nVocê é burro.\nO resultado é {}.".format(a/b))
-                else:
-                    print("Mandou bem!\nO resultado é {}.".format(a/b))
-            
-            case 5:
-                r = int(input("Qual a raiz quadrada de {}?\n".format(a)))
-                if r != (a ** (1/2)):
-                    print("Errado.\nVocê é burro.\nO resultado é {}.".format(a ** (1/2)))
-                else:
-                    print("Mandou bem!\nO resultado é {}.".format(a ** (1/2)))
-            
 
 
-
-        opcao = int(input("\n1. Outra operação\n0 - Voltar ao Menu.\n"))
-        if opcao == 1:
-            acerte_a_conta()
-        else:
-            break
-
+            opcao = int(input("\n1. Outra operação\n0 - Voltar ao Menu.\n"))
+            if opcao == 1:
+                acerte_a_conta()
+            else:
+                break
 
 def elogiador():
     while True:
-        g = int(input("Você é menino ou menina?\n1. Menino\n2. Menina\n3. Sou um alien\n"))
+        os.system("cls")
+        g = int(input("Você é menino ou menina?\n1. Menino\n2. Menina\n0. Voltar ao menu principal\n"))
 
         if g == 1:
             while True:
@@ -117,14 +145,147 @@ def elogiador():
             continue
         
 
+def cpf_checker():
+
+    # código de neandertal do caralhooooo
+
+    while True:
+        os.system("cls")
+        cpf_str = str(input("Digite seu CPF:\n")).strip()
+        cpf_str = cpf_str.replace(".", "")
+        cpf_str = cpf_str.replace("-", "")
+
+        quant = len(cpf_str)
+        #123234345
+        # lista = []
+        cont = 0
+
+        while cont < 2:
+            os.system("cls")
+            print("Checando")
+            time.sleep(1)
+            print("Checando.")
+            time.sleep(1)
+            print("Checando..")
+            time.sleep(1)
+            cont += 1
+
+        if quant < 11 or quant > 11 or cpf_str.isalpha == True:
+            a = input("\nValor inválido. Tente novamente.\n\n0. Voltar\n")
+            if a == 0:
+                cpf_checker()
+        
+        else:
+            while True:
+                n1 = int(cpf_str[0])
+                n2 = int(cpf_str[1])
+                n3 = int(cpf_str[2])
+                n4 = int(cpf_str[3])
+                n5 = int(cpf_str[4])
+                n6 = int(cpf_str[5])
+                n7 = int(cpf_str[6])
+                n8 = int(cpf_str[7])
+                n9 = int(cpf_str[8])
+
+                n1 *= 1
+                n2 *= 2
+                n3 *= 3
+                n4 *= 4
+                n5 *= 5
+                n6 *= 6
+                n7 *= 7
+                n8 *= 8
+                n9 *= 9
+
+                numero_final = n1 + n2 + n3 + n4 + n5 + n6 + n7 + n8 + n9
+                num_top = numero_final % 11
+
+                num_a = str(num_top)
+
+                num_b = num_a[-1]
+
+                strong = cpf_str + num_b
+
+                # __________________________________________
+
+                nn1 = int(strong[0])
+                nn2 = int(strong[1])
+                nn3 = int(strong[2])
+                nn4 = int(strong[3])
+                nn5 = int(strong[4])
+                nn6 = int(strong[5])
+                nn7 = int(strong[6])
+                nn8 = int(strong[7])
+                nn9 = int(strong[8])
+                nn10 = int(strong[9])
+
+                nn1 *= 0
+                nn2 *= 1
+                nn3 *= 2
+                nn4 *= 3
+                nn5 *= 4
+                nn6 *= 5
+                nn7 *= 6
+                nn8 *= 7
+                nn9 *= 8
+                nn10 *= 9
+
+                numero_final2 = nn1 + nn2 + nn3 + nn4 + nn5 + nn6 + nn7 + nn8 + nn9 + nn10
+
+                num_top2 = numero_final2 % 11
+
+                num_a2 = str(num_top2)
+
+                num_b2 = num_a2[-1]
+                break
+
+            # verificador1 = num_b
+            # verificador2 = num_b2
+            
+            global valido
+
+            if num_b == cpf_str[-2] and num_b2 == cpf_str[-1]:
+                valido = True
+            else:
+                valido = False
+
+            
+            if valido == True:
+                print("\nO CPF é válido.")
+            elif valido == False:
+                print("\nO CPF é inválido.")
+
+
+            # 1 2 3 4 5 6 7 8 9    0 9
+            # 0 1 2 3 4 5 6 7 8    9  0 1
+
+            # else:
+                # print(f"\nO CPF {cpf_str[0:4] + "." + cpf_str[4:7] + "."} é inválido.")
+            
+            print("\n1. Tentar novamente\n0. Menu principal")
+            a = input()
+
+            if a == 1:
+                cpf_checker()
+            elif a == 0:
+                break
+
+
+
+
+
+
+
+
+
 
 # MAIN
 while True:
 
-    
+    os.system("cls")
     print("\n", "="*20, "Coisas Inúteis", "="*20)
     print("Selecione uma opção\n", end="             :)")
-    print("\n1. Repetidor de frase\n2. Gerador de operação\n3. Algoritmo elogiador")
+    print("\n1. Repetidor de frase\n2. Gerador de operação\n3. Algoritmo elogiador\n4. Pedra Papel Tesoura\n5. Validar CPF")
     opcao = int(input())
 
     match opcao:
@@ -134,7 +295,16 @@ while True:
             acerte_a_conta()
         case 3:
             elogiador()
+        case 4:
+            pedra_papel_tesoura()
+        case 5:
+            cpf_checker()
 
+
+
+   
+
+    # lista.append(n1, n2, n3, n4, n5, n6, n7, n8, n9)
 
 
 
