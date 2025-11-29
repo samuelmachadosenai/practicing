@@ -1,7 +1,7 @@
 import json as j
 import classes as c
 
-data = c.User.dic
+data = c.User.users_info
 
 
 

@@ -51,4 +51,22 @@
         "data de criacao": "2025-11-27",
         "horario de criacao": "07:21:59.218074"
     }
+}{
+    "usuario": {
+        "nome": "SAmuel",
+        "senha": "4545454",
+        "id": "69-53-52",
+        "status": "ativo",
+        "data de criacao": "2025-11-27",
+        "horario de criacao": "19:28:25.225698"
+    }
+}{
+    "usuario": {
+        "nome": "asasasaaaaaa",
+        "senha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "id": "45-63-44",
+        "status": "ativo",
+        "data de criacao": "2025-11-27",
+        "horario de criacao": "19:39:06.287788"
+    }
 }

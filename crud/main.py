@@ -1,18 +1,49 @@
 import defs as d
 import sa
+import os
+import time
+
+def loading():
+    while True:
+        os.system("cls")
+        print(".")
+        time.sleep(1)
+        print("..")
+        time.sleep(1)
+        print("...")
+        time.sleep(0.8)
+        break
+
 
 def cria():
     while True:
 
         while True:
             nome = str(input("Digite seu nome de usuário:\n"))
-            senha = str(input("Digite sua senha:\n"))
+            
 
-
-            if d.name_checker(nome) == True:
+       
+            if len(nome) <= 12:
                 break
             else:
+                print("\nNome muito longo. Tente novamente.\n")
                 continue
+        
+        while True:
+
+            senha = str(input("Digite sua senha:\n"))
+            
+
+
+            if len(senha) <= 12:
+                break
+            else:
+                print("\nSenha muito longa. Tente novamente.\n")
+                continue
+
+
+
+        
 
         data, horario = d.datahora()
         
@@ -67,5 +98,8 @@ def login():
         sa.login_check(user, senha)
         break
 
-login()
+
+
+cria()
+# login()
 

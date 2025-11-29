@@ -10,7 +10,7 @@ class User:
         global dic
         dic = self.__dict__
         global users_info
-        User.users_info.append(dic)
+        users_info = User.users_info.append(dic)
     
 
 
