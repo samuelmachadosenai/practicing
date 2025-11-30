@@ -8,11 +8,28 @@ import os
 def cls():
    os.system("cls")
 
+
 def formatar(cpf):
   #  '146.564.549-74"
   um = cpf[0:3]
   dois = cpf[3:6]
   tres = cpf[6:9]
+
+  qua = cpf[9:11]
+
+  lista = [um, dois, tres]
+
+  componto = ".".join(lista)
+
+  lista = [componto, qua]
+
+  hifen = "-".join(lista)
+
+  print(hifen)
+
+  return hifen
+
+
 
 
 
@@ -118,6 +135,8 @@ def cadastrar():
       print("\nInválido. Tente novamente.\n")
       continue
 
+    cpf = formatar(cpf)
+
     cls()
     nome = str(input("Digite seu nome:\n"))
     cls()
@@ -135,10 +154,8 @@ def ver():
 
 
 
-
-
   print("-"*10, "Alunos", "-"*10)
-  while n < s:
+  while n <= s:
     print(f"Aluno:{n}")
     n += 1
 
@@ -178,7 +195,7 @@ matricula = gen()
 
 
 
-global cpf
+# global cpf
 
 # menu()
 while True:
