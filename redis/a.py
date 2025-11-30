@@ -34,7 +34,7 @@ matricula = gen()
 
 
 data = {
-    "matricula": cpf,
+    "matricula": matricula,
     "nome": nome,
     "data_de_nascimento": data_nasc
   }
@@ -44,38 +44,47 @@ data = {
 data = str(data)
 
 def zee():
-  zero = 0
-  r.save_id(zero)
+  zero = 1
+  return zero
 
 def f():
   b = r.getid()
   b = int(b)
   b += 1
-  r.save_id(b)
   return b
 
 # def ff():
 #   c = 1
 #   r.save_id(c)
 #   return 
+z = r.getid()
 
-if r.getid() == None:
+if z == None:
   a = zee()
 else:
   a = f()
 
+r.save_id(a)
 
-a = f()
+
 a = str(a)
 
 lista = ['Aluno', a]
 
 aluno_id = ':'.join(lista)
 
+# r.indice(aluno_id)
+
 r.banco(aluno_id, data)
 
+qtd = r.qtd()
 
 print("Matrícula concluída.")
+
+print(aluno_id)
+print(qtd)
+
+
 
 
 # def salvar(m):
@@ -83,3 +92,8 @@ print("Matrícula concluída.")
 #       json.dump(m, f, indent=4)
 
 # salvar(matricula)
+
+
+
+
+
