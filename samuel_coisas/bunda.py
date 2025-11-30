@@ -145,6 +145,27 @@ def elogiador():
             continue
         
 
+def formatar(cpf):
+  #  '146.564.549-74"
+  um = cpf[0:3]
+  dois = cpf[3:6]
+  tres = cpf[6:9]
+
+  qua = cpf[9:11]
+
+  lista = [um, dois, tres]
+
+  componto = ".".join(lista)
+
+  lista = [componto, qua]
+
+  hifen = "-".join(lista)
+
+  print(hifen)
+
+
+  
+
 def cpf_checker():
 
     # código de neandertal do caralhooooo
@@ -261,7 +282,7 @@ def cpf_checker():
 
             # else:
                 # print(f"\nO CPF {cpf_str[0:4] + "." + cpf_str[4:7] + "."} é inválido.")
-            
+            formatar(cpf_str)
             print("\n1. Tentar novamente\n0. Menu principal")
             a = input()
 

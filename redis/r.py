@@ -24,7 +24,13 @@ def banco(id, d):
 
 # def indice(aluno):
 #     r.lpush("Alunos", aluno)
-    
+
+def getaluno(aluno):
+    a = r.hgetall(aluno)
+    a = str(a)
+
+    return a
+
 
 def qtd():
     a = r.keys("*")
