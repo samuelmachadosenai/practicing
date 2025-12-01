@@ -28,8 +28,11 @@ def banco(id, d):
 def getaluno(aluno):
     a = r.hgetall(aluno)
     a = str(a)
-
+    # a = a.strip("")
     return a
+
+# "a,b,c".split(',', 1) retorna ['a', 'b,c'].
+# {b'info': b"{'matricula': 5221, 'nome': 'sssssssss', 'data_de_nascimento': 3333333333}"}
 
 
 def qtd():
@@ -37,6 +40,10 @@ def qtd():
     a = str(a)
     a = a.count("Aluno:")
     return a
+
+
+
+
 
 
 # salvar o id no banco
