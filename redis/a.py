@@ -139,6 +139,7 @@ def cadastrar():
 
     cls()
     nome = str(input("Digite seu nome:\n"))
+    # nome = nome.decode('utf-8')
     cls()
     data_nasc = int(input("Digite sua data de nascimento:\n"))
     cls()
@@ -147,27 +148,37 @@ def cadastrar():
   return cpf, nome, data_nasc
 
 def ver():
-  cls()
-  s = r.getid()
-  s = int(s)
-  n = 1
+  while True:
+    cls()
+    s = r.getid()
+    s = int(s)
+    n = 1
 
 
 
-  print("-"*10, "Alunos", "-"*10)
-  while n <= s:
-    print(f"Aluno:{n}")
-    n += 1
+    print("-"*10, "Alunos", "-"*10)
+    while n <= s:
+      print(f"Aluno:{n}")
+      n += 1
 
-  esc = int(input("\nSelecione o número do aluno para ver detalhes: "))
+    esc = int(input("\nDigite o número do aluno para ver detalhes: "))
 
-  if esc > s or esc < 1:
-     print("\nO aluno não existe.")
-  else:
-    esc = str(esc)
-    cu = "Aluno:" + esc
-    print(cu)
-    print("Informações: ", r.getaluno(cu))
+    if esc > s or esc < 1:
+      print("\nO aluno não existe.")
+    else:
+      esc = str(esc)
+      bubassauro = "Aluno:" + esc
+      print(bubassauro)
+      a = r.getaluno(bubassauro)
+      print("Informações: ", a)
+
+      print("1. aaaaaa\n0. Voltar")
+      a = int(input())
+
+      if a == 1:
+        continue
+      elif a == 0:
+        break
 
 
 
@@ -197,32 +208,34 @@ matricula = gen()
 
 # global cpf
 
-# menu()
-while True:
+menu():
+  while True:
 
 
-  
-  print("1. Cadastrar aluno")
-  print("2. Ver alunos")
-  e = int(input())
+    
+    print("1. Cadastrar aluno")
+    print("2. Ver alunos")
+    e = int(input())
 
-  if e  == 1:
-      break
-  elif e == 2:
-      ver()
-  else:
-      continue
-  
-cpf, nome, data_nasc = cadastrar()
+    if e  == 1:
+        break
+    elif e == 2:
+        ver()
+        break
 
-
-data = {"Matricula": matricula, "CPF": cpf, "Nome": nome, "DataNascimento": data_nasc}
-
+    else:
+        continue
+    
+  cpf, nome, data_nasc = cadastrar()
 
 
+  data = {"Matricula": matricula, "CPF": cpf, "Nome": nome, "DataNascimento": data_nasc}
 
 
-data = str(data)
+
+
+
+  data = str(data)
 
 # ____________________________________________________
 
