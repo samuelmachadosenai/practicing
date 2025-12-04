@@ -40,11 +40,9 @@ while True:
 
     print("\nContinuar?\n1. Sim\n0. Não")
     op = int(input())
-    
+
     if op == 1:
         continue
     else:
         print("\nObrigado por jogar.")
         break
-    
- 
