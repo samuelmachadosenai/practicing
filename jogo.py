@@ -26,8 +26,10 @@ while True:
     num1, num2 = gen()
     r = num1 + num2
     print(f"Score: {score}")
+  
     print(f"\nQuanto é {num1} mais {num2}?")
     a = int(input())
+
     
     if a == r:
         print(f"\n{GREEN}Acertou.{RESET}")
@@ -35,10 +37,10 @@ while True:
     else:
         print(f"\n{RED}Errou.{RESET}")
         score -= 1
-    
+
     print("\nContinuar?\n1. Sim\n0. Não")
     op = int(input())
-
+    
     if op == 1:
         continue
     else:
