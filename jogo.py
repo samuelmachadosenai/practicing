@@ -20,29 +20,32 @@ RESET = "\033[0m"
 score = 0
 
 
-
-while True:
-    os.system("cls")
-    num1, num2 = gen()
-    r = num1 + num2
-    print(f"Score: {score}")
-  
-    print(f"\nQuanto é {num1} mais {num2}?")
-    a = int(input())
-
+def soma():
+    while True:
+        os.system("cls")
+        num1, num2 = gen()
+        r = num1 + num2
+        print(f"Score: {score}")
     
-    if a == r:
-        print(f"\n{GREEN}Acertou.{RESET}")
-        score += 1
-    else:
-        print(f"\n{RED}Errou.{RESET}")
-        score -= 1
+        print(f"\nQuanto é {num1} mais {num2}?")
+        a = int(input())
 
-    print("\nContinuar?\n1. Sim\n0. Não")
-    op = int(input())
+        
+        if a == r:
+            print(f"\n{GREEN}Acertou.{RESET}")
+            score += 1
+        else:
+            print(f"\n{RED}Errou.{RESET}")
+            print(f"O resultado era {r}.")
+            score -= 1
 
-    if op == 1:
-        continue
-    else:
-        print("\nObrigado por jogar.")
-        break
+        print("\nContinuar?\n1. Sim\n0. Não")
+        op = int(input())
+
+        if op == 1:
+            continue
+        else:
+            print(f"\nScore final: {score}")
+            if score < 0:
+                print("Pratique mais.")
+            break
