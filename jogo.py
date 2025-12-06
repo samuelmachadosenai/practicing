@@ -49,3 +49,5 @@ def soma():
             if score < 0:
                 print("Pratique mais.")
             break
+
+soma()
