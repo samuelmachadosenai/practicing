@@ -50,4 +50,16 @@ def soma():
                 print("Pratique mais.")
             break
 
-soma()
+def main():
+    while True:
+        print("""Qual jogo você deseja jogar?
+            1. Soma
+            2. Subtração
+            3. Multiplicação
+            4. Divisão""")
+        
+        opcao = input()
+
+        match opcao:
+            case 1:
+                soma()
