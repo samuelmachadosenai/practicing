@@ -18,22 +18,29 @@ RESET = "\033[0m"
 
 
 score = 0
-
+questao = 0
+acerto = 0
 
 def soma():
     while True:
         os.system("cls")
         num1, num2 = gen()
+        global score
         r = num1 + num2
+    
         print(f"Score: {score}")
     
         print(f"\nQuanto é {num1} mais {num2}?")
+        global questao
+        global acerto
+        questao += 1
         a = int(input())
 
         
         if a == r:
             print(f"\n{GREEN}Acertou.{RESET}")
             score += 1
+            acerto += 1
         else:
             print(f"\n{RED}Errou.{RESET}")
             print(f"O resultado era {r}.")
@@ -45,6 +52,8 @@ def soma():
         if op == 1:
             continue
         else:
+            os.system("cls")
+            print(f"Acertos: {acerto}/{questao}")
             print(f"\nScore final: {score}")
             if score < 0:
                 print("Pratique mais.")
