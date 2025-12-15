@@ -11,11 +11,12 @@ cl = f"{RESET}"
 
 c = "feliz"
 b = "natal"
+ac = "Açucena"
 
 while True:
     os.system("cls")
-    print(r, c, g, b)
+    print(r, c, g, b, r, ac)
     time.sleep(0.8)
     os.system("cls")
-    print(g, c, r, b)
+    print(g, c, r, b, g, ac)
     time.sleep(0.8)
