@@ -59,8 +59,6 @@ def soma():
                 print("Pratique mais.")
             break
 
-def 
-
 def main():
     while True:
         print("""Escolha:

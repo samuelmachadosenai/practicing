@@ -1,4 +1,4 @@
-import classes as c
+import POO.lixeira.classes as c
 import jsones as j
 import os
 import time

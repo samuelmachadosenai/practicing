@@ -1,5 +1,5 @@
 import json as j
-import classes as c
+import POO.lixeira.classes as c
 
 data = c.User.users_info
 
