@@ -12,7 +12,7 @@ cl = f"{RESET}"
 c = "feliz"
 b = "natal"
 
-while True
+while True:
     os.system("cls")
     print(r, c, g, b)
     time.sleep(0.8)
