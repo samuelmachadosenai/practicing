@@ -28,17 +28,25 @@ def ex003():
     c = random.randint(15, 55)
 
     b = (s, d, c)
-
-    maior = 0
-    menor = 0
-    for a in b:
-        if a > a:
-            maior = a
-        if a < a:
-            menor = a
     
     print(b)
-    print(maior, menor)
+    print(max(b), min(b))
+
+def ex004():
+    tupla = ()
+    for i in range(1, 5):
+        print(f"digita o {i}o numero ai pfv\n")
+        tupla = i
+
+    print(tupla)
+
+def ex005():
+    listagem = ("Pão", 1, "Leite", 3.5)
+
+    # for pos in range(0, len(listagem)):
+        
+        
+
 
 
 while True:

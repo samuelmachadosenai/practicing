@@ -59,7 +59,58 @@ def soma():
                 print("Pratique mais.")
             break
 
-        a
+total = 0
+a = 0
+  
+
+
+def scan():
+    venda = []
+    # while True:
+    #     a = int("Aperte para scanear.")
+
+    #     for c, p in enumerate(produto):
+    #         import keyboard
+    import time
+    import keyboard
+    import rand as r
+
+    while True:
+    
+        if keyboard.is_pressed('space'):
+            time.sleep(0.4)  # Pequena pausa para evitar múltiplas detecções
+
+            nome, preco = r.prod()
+
+
+            
+
+            tupla = (nome, preco)
+            
+            venda.append(tupla)
+            # preco = produto['preço']
+
+            
+            global total 
+            total += preco
+
+    
+            for i in venda:
+                
+                preco = i[1]
+
+                global a 
+                a += 1
+
+                print(f"{a}. {i}")
+            
+        if keyboard.is_pressed('a'):
+                break
+    os.system("cls")
+    print(venda)
+    total = float(total)
+
+    print("Total: {:.2f}".format(total))
 
 def main():
     while True:
@@ -69,10 +120,12 @@ def main():
             3. Multiplicação
             4. Divisão""")
         
-        opcao = input()
+        opcao = int(input())
 
         match opcao:
             case 1:
                 soma()
             case 2:
                 scan()
+
+main()
