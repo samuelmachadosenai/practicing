@@ -44,6 +44,17 @@ def ex005():
     listagem = ("Pão", 1, "Leite", 3.5)
 
     # for pos in range(0, len(listagem)):
+def ex006():
+    lista = []
+    for i in range(0, 5):
+        print("digite o número na posição", i)
+        n = int(input())
+        lista.append(n)
+
+    print(lista)
+    print("maior:", max(lista), "posição:", lista.index(max(lista)))
+    print("menor:", min(lista), "posição:", lista.index(min(lista)))
+
         
         
 
