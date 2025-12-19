@@ -55,6 +55,7 @@ while True:
 
         print("A letra '{}' está na posição {}.".format(letr.capitalize(), posicao_print))
 
+        
         print(palavra)
     else:
         print("Não há letra '{}' na palavra.".format(letr.capitalize()))
